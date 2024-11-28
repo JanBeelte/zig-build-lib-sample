@@ -29,7 +29,6 @@ pub fn build(b: *std.Build) void {
     // running `zig build`).
     b.installArtifact(lib);
 
-    // Is this necessary?
     _ = b.addModule("sample_lib", .{
         .root_source_file = b.path("src/lib.zig"),
     });
