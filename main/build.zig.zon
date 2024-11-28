@@ -24,7 +24,9 @@
     // internet connectivity.
     .dependencies = .{
         .sample_lib = .{
-            .path = "../lib",
+            // .path = "../lib",
+            .url = "https://github.com/JanBeelte/zig-build-lib-sample/releases/download/v0.1.0/lib.tar.xz",
+            .hash = "122069b79ffc98f0ce4ab703524809733b34316580cd9cbbe1fcbf686aceb5ab9dce",
         },
         // See `zig fetch --save <url>` for a command-line interface for adding dependencies.
         //.example = .{
