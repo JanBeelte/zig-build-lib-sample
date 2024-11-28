@@ -22,6 +22,16 @@ pub fn build(b: *std.Build) void {
         .optimize = optimize,
     });
 
+    const lib_dep = b.dependency("sample_lib", .{
+        .target = target,
+        .optimize = optimize,
+    });
+
+
+    // Add the dependency module to your executable
+    exe.root_module.addImport("sample_lib", lib_dep.module("sample_lib"));
+
+
     // This declares intent for the executable to be installed into the
     // standard location when the user invokes the "install" step (the default
     // step when running `zig build`).

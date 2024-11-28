@@ -23,7 +23,7 @@
     // Once all dependencies are fetched, `zig build` no longer requires
     // internet connectivity.
     .dependencies = .{
-        .lib = .{
+        .sample_lib = .{
             .path = "../lib",
         }
         // See `zig fetch --save <url>` for a command-line interface for adding dependencies.

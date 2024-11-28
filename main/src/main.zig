@@ -1,5 +1,5 @@
 const std = @import("std");
-// const lib = @import("lib");
+const sample_lib = @import("sample_lib");
 
 pub fn main() !void {
     // Prints to stderr (it's a shortcut based on `std.io.getStdErr()`)
@@ -12,7 +12,7 @@ pub fn main() !void {
     var bw = std.io.bufferedWriter(stdout_file);
     const stdout = bw.writer();
 
-    // try stdout.print("3 + 7 = {}", .{ lib.add(3, 7) });
+    try stdout.print("3 + 7 = {}\n", .{sample_lib.add(3, 7)});
 
     try stdout.print("Run `zig build test` to run the tests.\n", .{});
 
